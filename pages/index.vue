@@ -34,7 +34,7 @@ const login = async () => {
   console.log('error', error)
 }
 
-const user = useSupabaseUser()
+const a = useSupabaseUser()
 onMounted(() => {
   watchEffect(() => {
     if (user.value) {
@@ -45,48 +45,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
-    <form
-        @submit.prevent="() => (isSignUp ? signUp() : login())"
-        class="flex flex-col gap-2"
-    >
-        <input 
-            type="email"
-            placeholder="Email"
-            v-model="email"
-            class="p-2 bg-gray-600 rounded text-white"
-        >
-        <input 
-            type="password"
-            placeholder="Password"
-            v-model="password"
-            class="p-2 bg-gray-600 rounded text-white"
-        >
-        <input 
-          type="text"
-          placeholder="First name"
-          v-model="firstName"
-          class="p-2 bg-gray-600 rounded text-white"
-        >
-        <input 
-          type="text"
-          placeholder="Last name"
-          v-model="lastName"
-          class="p-2 bg-gray-600 rounded text-white"
-        >
-        <button type="submit" class="p-2 text-white bg-green-500 rounded">
-            <span v-if="isSignUp">Sign up</span>
-            <span v-else>Log in</span>
-        </button>
-    </form>
-    <button
-        @click="isSignUp = !isSignUp"
-        class="w-full mt-8 text-sm text-center underline text-slate-300"
-    >
-        <span v-if="isSignUp">Have an account? Login instead</span>
-        <span v-else>Create a new account</span>
-    </button>
-  </div>
+  <section class="">
+    <div class="flex">
+      <div style="min-width: 50%">
+
+      </div>
+      <div>
+        <img src="/img/cj-botha-flR7fkL9sLY-unsplash.jpg" alt="">
+      </div>
+    </div>
+  </section>
 </template>
 
 <style>
